@@ -1,0 +1,142 @@
+/*
+    DO NOT USE //
+    IT WILL MAKE YOU SAD
+
+    . = class
+    # = id
+*/
+
+
+/*********************************************************************/
+/* global layout */
+
+#titleInput {
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#descriptionInput {
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+}
+
+.button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.coreTable {
+    margin: 1px; /* the arrows provide a sufficient gap */
+}
+
+.codeTextArea {
+    width: 225px;
+    height: 225px; /* aim for 15 lines */
+    min-width: 225px;
+    min-height: 225px;
+    margin: 0px;
+}
+
+.coreRightTd div {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#logDiv {
+    margin: 5px;
+}
+
+/*********************************************************************/
+/* color */
+
+* {
+    color: #fff;
+    background-color: #202020;
+}
+
+#titleInput, #logDiv, #titleInput, #descriptionInput, .button, .coreTable * {
+    background-color: #101010;
+}
+
+.descRightCoreTd {
+    color: #BBB;
+}
+
+
+/*********************************************************************/
+/* text */
+
+body * {
+    font-family: monospace;
+    font-size: 12px;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* protip: don't pre-wrap your <body> */
+}
+
+#titleInput {
+    text-align: center;
+}
+
+.coreRightTd div {
+    text-align: center;
+}
+
+.codeTextArea {
+    font-size: 12px; /* aim for 15 lines */
+}
+
+.pipeArrow { /* large Unicode arrows */
+    font-size: 30px;
+}
+
+.pipeDiv, .pipeArrow, .pipeValue {
+    /* couldn't find how to center those spans without text-align. */
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pipeArrowHoriz {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.pipeArrowVerti {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+
+/*********************************************************************/
+/* borders */
+/*
+╔═══════════════════════╗
+║ CSS > Code page 437 ? ║
+╚═══════════════════════╝
+*/
+
+#titleInput {
+    box-sizing: border-box;
+    border: none;
+}
+
+#descriptionInput, .button, .coreTable {
+    box-sizing: border-box;
+    border: 3px double white;
+}
+
+.coreRightTd {
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-left: 3px double white;
+}
+
+.coreRightTdExceptTheBottomOne {
+    border-bottom: 3px double white;
+}
+
+.codeTextArea {
+    box-sizing: border-box;
+    border: none;
+}

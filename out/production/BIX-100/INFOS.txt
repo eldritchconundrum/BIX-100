@@ -1,0 +1,35 @@
+
+
+
+Design :
+
+dépendances :
+  ui uses runtime
+  runtime uses syntax
+  * uses util
+
+
+Le parsing ne dépend de rien, il est par core, et de type String -> SyntaxList
+
+Je prévois de gérer le live coding pendant l'exécution.
+La repr interne de l'état de l'interpréteur est donc mutable par les actions utilisateur.
+Mais elle reste indépendante dans le sens où elle ne connait pas le code ui.
+
+
+TODO
+    * afficher erreurs de compilation
+    * afficher ligne en cours (avec isInstructionHighlightDimmed)
+    * change core type
+    * calculer IDLE, avec tests
+    * ajouter des checks inter-cores, i.e. warnings de MOV vers un core sans read
+    * regarder doc google pour ajouter ici les TODO qui sont là-bas.
+
+
+
+
+
+deployment :
+    lftp ftp.cluster002.hosting.ovh.net
+    cd bix-100/
+    lcd ~/IdeaProjects/BIX-100/
+    rm -r out index.html ; mirror -R out out ; put index.html ; put style.css
